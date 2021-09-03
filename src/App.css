@@ -1,38 +1,278 @@
-.App {
-  text-align: center;
+.App{
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#nav-main{
+  background-color: rgba(225, 225, 225, 0.6);
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#basic-navbar-nav a {
+  text-decoration: none;
+  color: #f33131;
+  padding: 0 1rem;
+  font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* background-color:wheat; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.active{
+  color:rgb(0, 19, 97) !important;
+  border-bottom: rgb(0, 19, 97) 6px solid ;
+  padding: 1rem;
+  text-decoration: none;
 }
-
-.App-link {
-  color: #61dafb;
+.slider{
+  background-image: url('./assets/slider.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:rgb(255, 255, 255);
+  background-position: center;
 }
-
-@keyframes App-logo-spin {
+.slider-inner{
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5rem;
+  opacity: 0;
+  animation-name: slideranime ;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes slideranime {
+  0%{opacity: 0;}
+  50%{opacity: 0.5;}
+  100%{opacity: 1;}
+}
+.abouthome-inner{
+  padding: 5rem;
+}
+.spin{
+  position:absolute;
+  animation: rotation 10s infinite linear;
+  width:40%;
+  height: auto;
+}
+.spin-icon3{
+  position:absolute;
+  z-index: 2;
+  width: 200px;
+  left: 55%;
+  top:100%;
+}
+.spin-icon2{
+  position:absolute;
+  z-index: 4;
+  width: 200px;
+  left:75%;
+  top:90%;
+}
+.spin-icon1{
+  position:absolute;
+  z-index: 3;
+  width: 200px;
+  left:65%;
+  top:110%;
+}
+.work-icon1{
+  animation: rotation 10s infinite linear;
+  position:absolute;
+  left: 600px;
+}
+.work-icon3{
+  animation: rotation 10s infinite linear;
+  position:absolute;
+  left: 160px;
+}
+.work-icon2{
+  animation: updown 5s infinite alternate;
+  position:absolute;
+  right: 100px;
+}
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes updown {
+  0%{
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(120px);
+  }
+}
+.admin-work{
+  text-align: center;
+}
+#admin-work-header{
+  padding: 5rem;
+}
+
+.card-work-1{
+  background-color: #eee !important;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+  padding: 3rem;
+  text-align: left !important;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.card-work-2{
+  background-color: #eee !important;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  padding: 3rem;
+  text-align: left !important;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.icon-work{
+  color: #ef3033;
+}
+.card-work-1:hover{
+  background: radial-gradient(at top right,  rgb(255,0,0), rgb(255, 0, 0)20%, #dc143c  20.2%,  #dc143c 40%, rgb(18, 28, 67) 40.2%, rgb(18, 28, 67));
+  color:white;
+}
+.card-work-2:hover{
+  background: radial-gradient(at top right,  rgb(255,0,0), rgb(255, 0, 0)20%, #dc143c  20.2%,  #dc143c 40%, rgb(18, 28, 67) 40.2%, rgb(18, 28, 67));
+  color:white;
+}
+.card-work-1.icon-work:hover{
+  color:#fff !important;
+}
+.card-work-2.icon-work:hover{
+  color:#fff !important;
+}
+.portf-pattern{
+  position:absolute;
+  right:0 !important;
+  width:50%;
+}
+.portfolio-home-inner{
+  background: radial-gradient(at top right, #ef3033 , rgb(18, 28, 67));
+  padding: 5rem;
+  color:#fff;
+}
+.portfolio-home-inner2{
+  /* background-color: rgb(18, 28, 67); */
+  background-image: url('./assets/portfolio-bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem;
+  color:#fff;
+  font-family: cursive;
+}
+.portf-card{
+  padding: 3rem;
+  text-align: center;
+  margin:3rem;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  color:white;
+  border: 2px dotted #fff !important;
+  background-color: inherit !important;
+  border-radius: 20px !important;
+}
+
+.portf-card .card-text{
+  font-weight: 600;
+}
+.portf-card:hover {
+  transform: rotateY(180deg);
+  color:rgb(18, 28, 67) !important;
+  background-color: #fff !important;
+}
+.portf-card:hover .card-text{
+  transform: rotateY(-180deg) !important;
+}
+.contact{
+  background-image: url('./assets/contact.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem;
+  color:#fff;
+}
+input{
+  background: inherit !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  width:50%;
+  color:#fff !important;
+}
+.contact-card {
+  background: rgb(18, 28, 67) !important;
+  font-size: larger;
+  border: #ef3033 2px solid !important;
+  padding: 2rem;
+}
+.contact-card .card-text a{
+  text-decoration: none;
+  color: inherit;
+}
+.contact-form{
+  border: dotted 2px #ef3033 !important;
+  padding: 3rem;
+  margin-bottom: 5rem;
+}
+.form-main{
+  font-family:cursive;
+  font-size: 20px;
+}
+.footer{
+  background-image: url('./assets/footer-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:#fff;
+}
+.footer-inner{
+  padding: 3rem 3rem;
+}
+
+.footer-hidden{
+  display:none;
+}
+.quicklinks li a{
+  text-decoration: none !important;
+  color: inherit; 
+  font-family: sans-serif;
+}
+ul li{
+  padding-bottom: 2rem !important;
+  list-style-type: square;
+}
+/* Responsive */
+@media  (max-width: 767px) {
+  .card-work-1 , .card-work-2{
+    margin-top: 1rem !important;
+  }
+  .spin-outer{
+    display: none !important;
+  }
+  .work-icon1, .work-icon2, .work-icon3{
+    display: none !important;
+  }
+  .portf-card{
+    margin: 0;
+    padding: auto;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+  }
+  .portf-card:hover {
+    transform: rotateY(180deg);
+    color:rgb(18, 28, 67) !important;
+    background-color: #fff !important;
+  }
+  .portf-card:hover .card-text{
+    transform: rotateY(-180deg) !important;
+  }
+}
+@media (min-width:768px) and (max-width:1023px) {
+  .card-work-1 , .card-work-2{
+    margin-top: 1rem !important;
+  }
+  .spin-outer{
+    display: none !important;
   }
 }
