@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/atom-ui/static/css/main.ab067bcc.chunk.css",
+    "main.js": "/atom-ui/static/js/main.e6a5cc0b.chunk.js",
+    "main.js.map": "/atom-ui/static/js/main.e6a5cc0b.chunk.js.map",
+    "runtime-main.js": "/atom-ui/static/js/runtime-main.17e63532.js",
+    "runtime-main.js.map": "/atom-ui/static/js/runtime-main.17e63532.js.map",
+    "static/css/2.818011ed.chunk.css": "/atom-ui/static/css/2.818011ed.chunk.css",
+    "static/js/2.7236eca8.chunk.js": "/atom-ui/static/js/2.7236eca8.chunk.js",
+    "static/js/2.7236eca8.chunk.js.map": "/atom-ui/static/js/2.7236eca8.chunk.js.map",
+    "static/js/3.d26b96f7.chunk.js": "/atom-ui/static/js/3.d26b96f7.chunk.js",
+    "static/js/3.d26b96f7.chunk.js.map": "/atom-ui/static/js/3.d26b96f7.chunk.js.map",
+    "index.html": "/atom-ui/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/atom-ui/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.ab067bcc.chunk.css.map": "/atom-ui/static/css/main.ab067bcc.chunk.css.map",
+    "static/js/2.7236eca8.chunk.js.LICENSE.txt": "/atom-ui/static/js/2.7236eca8.chunk.js.LICENSE.txt",
+    "static/media/about1.6d96c585.jpg": "/atom-ui/static/media/about1.6d96c585.jpg",
+    "static/media/about2.a01715e4.jpg": "/atom-ui/static/media/about2.a01715e4.jpg",
+    "static/media/about3.e33704c1.jpg": "/atom-ui/static/media/about3.e33704c1.jpg",
+    "static/media/animespin.374740ca.png": "/atom-ui/static/media/animespin.374740ca.png",
+    "static/media/App.css": "/atom-ui/static/media/slider.6bc04afa.jpg",
+    "static/media/logo1.d53233d4.png": "/atom-ui/static/media/logo1.d53233d4.png",
+    "static/media/pattern1.8219ab51.png": "/atom-ui/static/media/pattern1.8219ab51.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17e63532.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.7236eca8.chunk.js",
+    "static/css/main.ab067bcc.chunk.css",
+    "static/js/main.e6a5cc0b.chunk.js"
+  ]
+}
