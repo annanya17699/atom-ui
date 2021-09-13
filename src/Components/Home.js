@@ -16,19 +16,7 @@ import about3 from '../assets/about3.jpg'
 import animespin from '../assets/animespin.png'
 import { HiOutlineLocationMarker, HiOutlineMailOpen } from 'react-icons/hi'
 import pattern1 from '../assets/pattern1.png'
-import p1 from '../assets/p1.png'
-import p2 from '../assets/p2.png'
-import p3 from '../assets/p3.png'
-import p4 from '../assets/p4.png'
-import p5 from '../assets/p5.png'
-import p6 from '../assets/p6.png'
-import p7 from '../assets/p7.png'
-import p8 from '../assets/p8.png'
-import p9 from '../assets/p9.png'
-import p10 from '../assets/p10.png'
-import p11 from '../assets/p11.png'
-import p12 from '../assets/p12.png'
-
+import { PortfolioGallary } from './PortfolioGallary'
 
 function Home() {
   const [connect, setConnect] = useState({
@@ -37,6 +25,14 @@ function Home() {
     phone: '',
     message: ''
   })
+  const [item, setItem] = useState(PortfolioGallary);
+  const filterItem = (catItem) =>{
+    const updateItem = PortfolioGallary.filter( data =>{
+      return data.category === catItem
+    })
+    setItem(updateItem);
+    
+  }
   return (
     <>
       <div className='slider' id='home'>
@@ -155,86 +151,27 @@ function Home() {
         <Container>
           <h3 style={{ color: '#ef3033' }}>Our Portfolio</h3>
           <br />
-          <Button variant='light' className="mx-5 my-3 pbtn">All</Button>
-          <Button variant='light' className="mx-5 my-3 pbtn">Beauty/Salon</Button>
-          <Button variant='light' className="mx-5 my-3 pbtn">Baby</Button>
-          <Button variant='light' className="mx-5 my-3 pbtn">Bakery</Button>
-          <Button variant='light' className="mx-5 my-3 pbtn">Taloring</Button>
+          <Button variant='light' className="mx-5 my-3 pbtn" onClick={()=> setItem(PortfolioGallary)}>All</Button>
+          <Button variant='light' className="mx-5 my-3 pbtn" onClick={()=> filterItem('beauty')}>Beauty/Salon</Button>
+          <Button variant='light' className="mx-5 my-3 pbtn" onClick={()=> filterItem('baby')}>Baby</Button>
+          <Button variant='light' className="mx-5 my-3 pbtn" onClick={()=> filterItem('bakery')}>Bakery</Button>
+          <Button variant='light' className="mx-5 my-3 pbtn" onClick={()=> filterItem('tailor')}>Taloring</Button>
 
           <Row>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://beautyonbank.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p1} alt='p1' />
+          {item && item.map( data => {
+            return(
+              <Col id={data.id} lg={4} md={6} sm={12}>
+                <hr/>
+                <h4 style={{color: '#ef3033'}}>{data.desc}</h4>
+              
+              <a href={data.link} ><img className='portfolio-url' src={data.image} alt={data.alt} />
               </a>
-              <h4 style={{color: '#ef3033'}}>Beauty On Bank</h4>
-              <hr/>
+              <hr style={{color: '#ef3033'}}/>
+            </Col>
+            )
+          }
 
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://catchybeauty.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p2} alt='p2' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Catchy Beauty</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://dazzlebeautysalon.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p3} alt='p3' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Dazzle Beauty Salon</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://collegenanniesandsitters.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p4} alt='p4' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>COllege Nannies and Sitters</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="http://www.rainbowchildlearning.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p5} alt='p5' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Rainbow Child Learning</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="http://www.tinytreasuresnyc.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p6} alt='p6' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Tiny Tresures NYC</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://www.breadsbakery.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p7} alt='p7' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Breads Bakery</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://flourshop.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p8} alt='p8' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Flour Shop</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://lusabakery.ca/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p9} alt='p9' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Lusa Bakery</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://www.nadialef.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p10} alt='p10' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Nadia Lef</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://www.bxtailor.co.uk/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p11} alt='p11' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>BX Tailor</h4>
-              <hr/>
-            </Col>
-            <Col lg={4} md={6} sm={12}>
-              <a href="https://institchu.com/" ><img className='portfolio-url' style={{ marginBottom: '50px' }} src={p12} alt='p12' />
-              </a>
-              <h4 style={{color: '#ef3033'}}>Institchu</h4>
-              <hr/>
-            </Col>
+          )}
           </Row>
         </Container>
       </div>
