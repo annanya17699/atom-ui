@@ -164,7 +164,7 @@ function Home() {
                 <hr/>
                 <h4 style={{color: '#ef3033'}}>{data.desc}</h4>
               
-              <a href={data.link} ><img className='portfolio-url' src={data.image} alt={data.alt} />
+              <a href={data.link} target="_blank" ><img className='portfolio-url' src={data.image} alt={data.alt} />
               </a>
               <hr style={{color: '#ef3033'}}/>
             </Col>
@@ -230,14 +230,14 @@ function Home() {
             <h2 className='text-white'>Got an !dea?</h2>
             <h5>Drop a message below and allow us to get back to you!!!</h5>
             <br />
-            <p className='form-main'>Hi! I am
+            <p className='form-main'>Hi! I am&nbsp; 
               <input type='text' placeholder='Your Name' value={connect.name} onChange={e => setConnect({ ...connect, name: e.target.value })} />
-              & got an idea to discuss. Kindly contact me. My email address is
+              & got an idea to discuss. Kindly contact me. My email address is&nbsp;
               <input type='email' placeholder='Email' value={connect.email} onChange={e => setConnect({ ...connect, email: e.target.value })} />
-              and my phone number is
+              and my phone number is&nbsp; 
               <input type='text' placeholder='Number' value={connect.phone} onChange={e => setConnect({ ...connect, phone: e.target.value })} />.
               <br />
-              Message :
+              Message : &nbsp; 
               <input as="textarea" placeholder='Your idea!' onChange={e => setConnect({ ...connect, message: e.target.value })} />.
             </p>
             <br />

@@ -219,6 +219,8 @@ input{
 .form-main{
   font-family:cursive;
   font-size: 20px;
+  line-height: 70px;
+  word-spacing: 20px;
 }
 .footer{
   background-image: url('./assets/footer-bg.jpg');

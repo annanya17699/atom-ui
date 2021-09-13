@@ -54,7 +54,7 @@ function Footer() {
             <Row className='footer-inner'>
                 <Col lg={12} md={12} sm={12}>
                     <hr className='text-danger'/>
-                    <h5 className='text-light'>Copyright © 2021 . All Rights Reserved.</h5>
+                    <h5 className='text-light text-center'>Copyright © 2021 . All Rights Reserved.</h5>
                     <h6 className='footer-hidden'>
                         Annanya <a href='www.linkedin.com/in/annanya-ranjan'>Linkedin</a>
                     </h6>
